@@ -765,6 +765,10 @@ body.page-top .top-wrap__ttl {
 body.page-top .top-wrap__desc {
   font-size: clamp(0.9rem, 0.8rem + 0.5vw, 1.25rem);
 }
+body.page-top #slider {
+  width: 100%;
+  height: 100vh;
+}
 body.page-top .news-wrap {
   margin-top: 50px;
 }
