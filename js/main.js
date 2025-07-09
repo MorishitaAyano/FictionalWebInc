@@ -35,9 +35,9 @@ $("#h-menu a").click(function () { //メニューのリンクがクリックさ�
 
 // Topスライド用画像リスト（すべてのデバイスで共通）
 const responsiveImage = [
-  { src: '../img/top.jpg' },
-  { src: '../img/top.jpg' },
-  { src: '../img/top.jpg' }
+  { src: './img/top.jpg' },
+  { src: './img/top.jpg' },
+  { src: './img/top.jpg' }
 ];
 
 // Vegasのスライダー設定
