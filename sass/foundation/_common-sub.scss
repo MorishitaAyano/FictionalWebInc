@@ -1,0 +1,89 @@
+@use "../global" as *;
+
+body.common-sub {
+  .top {
+    &-ttl {
+      width: 98%;
+      margin: 0 auto;
+      font-family: $font-en;
+      font-size: clamp(1.5rem, 0.786rem + 3.57vw, 4rem);
+      letter-spacing: 0.25rem;
+      display: flex;
+      align-items: center;
+      margin-top: 20.1vh;
+      @include mq (pc) {
+        margin-top: 17.6vh;
+      }
+      @include mq (sp) {
+        flex-direction: column;
+        align-items: start;
+      }
+      span {
+        display: block;
+        font-family: $font-normal;
+        font-size: clamp(0.9rem, 0.871rem + 0.14vw, 1rem);
+        letter-spacing: 0.0625rem;
+        font-weight: 400;
+        margin-left: 1.4%;
+        @include mq (sp) {
+          margin-left: 0;
+        }
+      }
+    }
+    &-wrap {
+      position: relative;
+      width: 100%;
+      height: calc(100vh - 32.1vh);
+      @include mq (pc) {
+        height: calc(100vh - 29.6vh);
+      }
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        width: 71.5%;
+        height: 72.5%;
+        background-color: $cBlack;
+        z-index: -1;
+        @include mq (pc) {
+          width: 65%;
+        }
+      }
+
+      &::before {
+        bottom: 0;
+        left: 0;
+      }
+
+      &::after {
+        top: 0;
+        right: 0;
+      }
+    }
+  }
+  .breadcrumb {
+    padding: 1.45% 2.4%;
+    &__list {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      display: flex;
+      align-items: center;
+      &:not(:last-child)::after {
+        content: "/";
+        margin: 0 1rem;
+        color: $cBlack;
+      }
+      &[aria-current="page"] {
+        color: rgba(0, 0, 0, 0.5);
+      }
+      a {
+        display: block;
+        padding: 12% 3%;
+        min-width: max-content;
+      }
+    }
+  }
+}

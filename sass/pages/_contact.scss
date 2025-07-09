@@ -1,0 +1,98 @@
+@use "../global" as *;
+body.page-contact {
+  .top-wrap {
+    &__image {
+      height: 39.3vh;
+      width: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../img/contact.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+      }
+    }
+  }
+  .contact-wrap {
+    &__txt {
+      color: $cBlack;
+      width: 83%;
+      margin: 0 auto;
+      @include margin-bottom;
+      @include mq (sp) {
+        width: 100%;
+      }
+    }
+    .Form {
+      width: 83%;
+      margin: 0 auto;
+      @include mq (sp) {
+        width: 100%;
+      }
+      .Form-Item {
+        @include margin-bottom;
+        &-Label {
+          color: $cBlack;
+          font-weight: bold;
+          font-size: 1rem;
+          margin-bottom: 1.5%;
+          &.isMsg {
+            margin-bottom: 12px;
+          }
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        textarea {
+          width: 100%;
+          padding: 1.1%;
+          border: 1px solid $cBorder;
+          transition: border-color 0.3s;
+          height: 4rem;
+          &:focus {
+            border-color: $cBlack;
+            outline: none;
+          }
+        }
+
+        textarea {
+          height: 15rem;
+          resize: vertical;
+        }
+      }
+
+      .Form-Submit {
+        text-align: center;
+
+        input[type="submit"] {
+          background: $cBlack;
+          color: $cWhite;
+          border: 1px solid $cBlack;
+          padding: 2% 4%;
+          font-size: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+          cursor: pointer;
+          transition: 0.3s ease;
+          width: 35%;
+          @include mq (tab) {
+            width: 50%;
+          }
+          @include mq (sp) {
+            width: 70%;
+          }
+          &:hover {
+            background: $cWhite;
+            color: $cBlack;
+          }
+        }
+      }
+    }
+  }
+}

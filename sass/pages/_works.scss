@@ -1,0 +1,75 @@
+@use "../global" as *;
+
+body.page-works {
+  .top-wrap {
+    &__image {
+      height: 39.3vh;
+      width: 100%;
+      position: relative;
+      top: 50%;
+      transform: translateY(-50%);
+      background-image: url('../img/works.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      &::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background-color: rgba(0, 0, 0, 0.3);
+        z-index: -1;
+      }
+    }
+  }
+  .works-wrap {
+
+    &__list__item {
+      &__image {
+        width: 83%;
+        aspect-ratio: 1.55 / 1;
+        position: relative;
+        @include mq (sp) {
+          margin: 0 auto;
+          aspect-ratio: 1 / 1;
+          width: 100%;
+        }
+        @include margin-bottom;
+      }
+      &:nth-of-type(even) {
+        .works-wrap__list__item__image {
+          margin-left: auto;
+        }
+      }
+      &__ttl {
+        padding: 1.7% 11.6%;
+        background-color: $cBlack;
+        color: $cWhite;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        @include mq (sp) {
+          font-size: 0.7rem;
+        }
+      }
+      &__tags {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background-color: $cGray;
+        @include flex;
+        span {
+          display: block;
+          padding: 1.2% 0;
+        }
+        @include mq (sp) {
+          font-size: 0.7rem;
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,17 @@
+@use "../setting" as *;
+@use './breakpoint' as *;
+
+@mixin flex($justify: center) {
+  display: flex;
+  align-items: center;
+  justify-content: $justify;
+}
+@mixin margin-bottom {
+  margin-bottom: 4.6%;
+  @include mq (tab) {
+    margin-bottom: 10%;
+  }
+  @include mq (sp) {
+    margin-bottom: 15.6%;
+  }
+}
