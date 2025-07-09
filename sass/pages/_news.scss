@@ -67,10 +67,14 @@ body.page-news {
         &:nth-of-type(3) {
           text-align: left;
         }
+        i {
+          margin: 0 0.5rem;
+        }
         a {
           display: inline-block;
-          font-size: clamp(0.9rem, 0.755rem + 0.72vw, 1.625rem);
+          font-size: clamp(0.9rem, 0.871rem + 0.14vw, 1rem);
           font-family: $font-en;
+          white-space: nowrap;
         }
         &__num {
           a {
@@ -78,6 +82,7 @@ body.page-news {
             font-size: 1.25rem;
             margin: 0 2.8rem;
             font-weight: bold;
+            white-space: nowrap;
             @include mq (sp) {
               margin: 0 1.5rem;
             }

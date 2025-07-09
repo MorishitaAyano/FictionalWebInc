@@ -43,6 +43,16 @@ body.page-contact {
           font-weight: bold;
           font-size: 1rem;
           margin-bottom: 1.5%;
+          display: flex;
+          align-items: center;
+          &-Required {
+            display: inline-block;
+            background-color: $cRed;
+            color: $cWhite;
+            font-size: 0.7rem;
+            padding: 0 3px;
+            margin-left: 8px;
+          }
           &.isMsg {
             margin-bottom: 12px;
           }
@@ -77,7 +87,7 @@ body.page-contact {
           color: $cWhite;
           border: 1px solid $cBlack;
           padding: 2% 4%;
-          font-size: clamp(1.25rem, 1.179rem + 0.36vw, 1.5rem);
+          font-size: clamp(1.1rem, 1.014rem + 0.43vw, 1.4rem);
           cursor: pointer;
           transition: 0.3s ease;
           width: 35%;
