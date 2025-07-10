@@ -46,7 +46,7 @@ body.page-news {
           }
           span {
             display: block;
-            font-size: 0.94rem;
+            font-size: clamp(0.8rem, 0.76rem + 0.2vw, 0.94rem);
             padding: 4px 10px;
             background-color: $cBlack;
             color: $cWhite;
@@ -79,7 +79,7 @@ body.page-news {
         &__num {
           a {
             display: inline-block;
-            font-size: 1.25rem;
+            font-size: clamp(1rem, 0.929rem + 0.36vw, 1.25rem);
             margin: 0 2.8rem;
             font-weight: bold;
             white-space: nowrap;

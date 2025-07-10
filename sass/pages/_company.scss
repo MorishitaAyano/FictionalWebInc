@@ -9,7 +9,7 @@ body.page-company {
       transform: translateY(-50%);
       background-image: url('../img/company.jpg');
       background-size: cover;
-      background-position: center;
+      background-position: 50% 45%;
       background-repeat: no-repeat;
       &::before {
         content: "";
@@ -25,6 +25,9 @@ body.page-company {
     position: relative;
     padding-left: 20px;
     @include margin-bottom;
+    @include mq (sp) {
+      padding-left: 18px;
+    }
     &::before {
       content: "";
       position: absolute;
@@ -34,6 +37,9 @@ body.page-company {
       left: 0px;
       top: 50%;
       transform: translateY(-50%);
+      @include mq (sp) {
+        width: 5px;
+      }
     }
   }
   .msg-wrap {

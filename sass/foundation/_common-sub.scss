@@ -6,12 +6,12 @@ body.common-sub {
       width: 98%;
       margin: 0 auto;
       font-family: $font-en;
-      font-size: clamp(1.5rem, 0.786rem + 3.57vw, 4rem);
+      font-size: clamp(1.8rem, 1.171rem + 3.14vw, 4rem);
       letter-spacing: 0.25rem;
       display: flex;
       align-items: center;
       margin-top: 20.1vh;
-      @include mq (pc) {
+      @include mq (tab) {
         margin-top: 17.6vh;
       }
       @include mq (sp) {
@@ -34,7 +34,7 @@ body.common-sub {
       position: relative;
       width: 100%;
       height: calc(100vh - 32.1vh);
-      @include mq (pc) {
+      @include mq (tab) {
         height: calc(100vh - 29.6vh);
       }
       &::before,
